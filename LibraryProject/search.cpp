@@ -8,8 +8,10 @@
 #include <vector>
 #include <string> // For Strings
 #include <sstream> // For istringstream
-#include "LibrarySearch.h" // Include the class interface header file
+#include <vector>
+#include <fstream>
 using namespace std;
+#include "LibrarySearch.h" // Include the class interface header file
 vector<string> split( const string& s, char delimiter )  {
     vector<string> tokens;          // vector of tokens
     string token;                   // a single token
