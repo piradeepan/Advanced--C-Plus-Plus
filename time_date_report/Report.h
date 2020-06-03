@@ -10,6 +10,8 @@ class Report {
     std::string rep_desc;
   public:
     //TO DO: constructor
+    Report(int day, int month, int year, int hour, int minute, std::string desc);
+
     void display(); //you write the definition
 };
 #endif
