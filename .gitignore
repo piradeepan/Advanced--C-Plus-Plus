@@ -1,3 +1,3 @@
 .DS_Store
-time_date_report/Date.o
+**/*.o
 **/.vscode/**
