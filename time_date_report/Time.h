@@ -4,7 +4,7 @@ class Time {
   public:
     Time(int hr, int min);
     Time(const Time& t);
-    void display();
+    void display() const;
   private:
     int hour;
     int minute;

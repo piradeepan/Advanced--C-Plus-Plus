@@ -1,5 +1,5 @@
 #include "Report.h"
-void func(Report r) //copy ctor
+void func(const Report& r) //copy ctor
 {
   r.display();
 }
@@ -7,7 +7,7 @@ void func(Report r) //copy ctor
 
 int main()
 {
-  Report r(07,02,1985,12,1985,"Piradeepan");
+  Report r(07,02,1985,11,20,"Piradeepan");
   // Create Report r;
   func(r);
 }

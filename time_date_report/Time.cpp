@@ -17,7 +17,7 @@ Time::Time(int hr, int min)
   minute=min;
 }
 
-void Time::display()
+void Time::display() const
 {
   cout << setfill('0');
   cout << setw(2) << hour << ':';

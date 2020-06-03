@@ -5,7 +5,7 @@ class Date {
   public:
     Date(int m, int d, int y); //3-arg ctor
     Date(const Date& d);       //copy ctor
-    void display();
+    void display() const;
   private:
     int month;
     int day;

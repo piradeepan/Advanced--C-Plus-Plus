@@ -12,6 +12,6 @@ class Report {
     //TO DO: constructor
     Report(int day, int month, int year, int hour, int minute, std::string desc);
 
-    void display(); //you write the definition
+    void display() const; //you write the definition
 };
 #endif
