@@ -1,5 +1,6 @@
-#include "Video.h"
 #include <iostream>
+#include "Media.h"
+#include "Video.h"
 using namespace std;
 
 Video::Video(string cn, string te, string st, string nts, string dn, string dr, string srs, string lbl): Media(cn, te, st, nts), description(dn), distributor(dr), series(srs), label(lbl) { }

@@ -6,10 +6,6 @@
 #include <fstream>
 using namespace std;
 #include "Media.h"
-#include "Book.h"
-#include "Film.h"
-#include "Periodical.h"
-#include "Video.h"
 #include "Search_engine.h"
 int main() {
     int option;

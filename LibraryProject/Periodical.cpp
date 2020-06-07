@@ -1,5 +1,6 @@
-#include "Periodical.h"
 #include <iostream>
+#include "Media.h"
+#include "Periodical.h"
 using namespace std;
 
 Periodical::Periodical(string cn, string te, string st, string nts, string ar, string dn, string pr, string ph, string srs, string rts, string oft, string gdn): Media(cn, te, st, nts), author(ar), description(dn), publisher(pr), publishing_history(ph), series(srs), related_titles(rts), other_forms_title(oft), govt_dc_number(gdn) { }

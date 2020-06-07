@@ -1,31 +1,23 @@
-# Sample Makefile for reference.
-# created by bjuliano@csuchico.edu
+main: Media.o Search_engine.o main.o Book.o Film.o Periodical.o Video.o
+	g++ Media.o Search_engine.o main.o Book.o Film.o Periodical.o Video.o -o main
 
-# Instructions:
-#   1) Replace "driver" in line 10 (under TARGET) with the name of the executable.
-#   2) Replace "sample0.o sample0-tester.o" in line 11 (under OBJS) with the names of the object files.
-#   3) Check and make sure the flags in line 14 are the ones you need for your project.
-#   4) Save using filename "Makefile" and use by typing "make" on the command line.
+main.o: main.cpp Media.h
+	g++ -c main.cpp
 
-TARGET       = main
-OBJS         = main.o
-REBUILDABLES = $(TARGET) $(OBJS)
-CC           = g++
-FLAGS        = -g -Wall -pedantic -std=c++11
-OTHERFLAGS   = -lstdc++
-INCLIB       =
+Media.o: Media.cpp Book.h Film.h Periodical.h Video.h Search_engine.h
+	g++ -c Media.cpp
 
-# Note: You shouldn't have to change anything below this line.
+Book.o: Book.cpp Book.h
+	g++ -c Book.cpp
 
-# Driver rules ...
-$(TARGET): $(OBJS)
-	$(CC) $(FLAGS) $(OTHERFLAGS) -o $@ $^ $(INCLIB)
+Film.o: Film.cpp Film.h
+	g++ -c Film.cpp
 
-# Standard rules ...
-%.o: %.cpp
-	$(CC) $(FLAGS) -o $@ -c $<
+Periodical.o: Periodical.cpp Periodical.h
+	g++ -c Periodical.cpp
 
-# Additional make options ...
-clean:
-	@rm -f $(REBUILDABLES)
-	@echo "All rebuildables deleted!"
+Video.o: Video.cpp Video.h
+	g++ -c Video.cpp
+
+Search_engine.o: Search_engine.cpp Search_engine.h
+	g++ -c Search_engine.cpp

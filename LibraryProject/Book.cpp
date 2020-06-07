@@ -1,5 +1,6 @@
-#include "Book.h"
 #include <iostream>
+#include "Media.h"
+#include "Book.h"
 using namespace std;
 
 Book::Book(string cn, string te, string st, string nts, string ar, string dn, string pr, string cy, string yr, string srs): Media(cn, te, st, nts), author(ar), description(dn), publisher(pr), city(cy), year(yr), series(srs) { }

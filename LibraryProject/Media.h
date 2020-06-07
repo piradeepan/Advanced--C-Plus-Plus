@@ -3,15 +3,15 @@
 #include <string>
 class Media {
    public:
-      Media(string cn, string te, string st, string nts);
-      bool compare_callnumber(const string& ss);
-      bool compare_title(const string& ss);
-      bool compare_subjects(const string& ss);
-      bool compare_notes(const string& ss);
-      virtual bool compare_other(const string& ss) = 0;
+      Media(std::string cn, std::string te, std::string st, std::string nts);
+      bool compare_callnumber(const std::string& ss);
+      bool compare_title(const std::string& ss);
+      bool compare_subjects(const std::string& ss);
+      bool compare_notes(const std::string& ss);
+      virtual bool compare_other(const std::string& ss) = 0;
       virtual void display() = 0;
    protected:
       std::string call_number, title, subjects, notes;
 };
-#include "Media.cpp"
+//#include "Media.cpp"
 #endif

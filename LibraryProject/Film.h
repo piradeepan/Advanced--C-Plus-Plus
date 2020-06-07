@@ -1,12 +1,13 @@
 #ifndef FILM_H_INCLUDED
 #define FILM_H_INCLUDED
+#include <string>
 class Film : public Media {
    public:
-      Film(string cn, string te, string st, string nts, string dtr, string yr);
-      virtual bool compare_other(const string& ss);
+      Film(std::string cn, std::string te, std::string st, std::string nts, std::string dtr, std::string yr);
+      virtual bool compare_other(const std::string& ss);
       void display();
    private:
       std::string director, year;
 };
-#include "Film.cpp"
+//#include "Film.cpp"
 #endif

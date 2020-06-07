@@ -5,6 +5,7 @@
 #include <fstream>
 #include <utility>
 #include <string>
+#include "Media.h"
 #include "Search_engine.h"
 using namespace std;
 vector<string> split( const string& s , char delimiter )  {
@@ -60,7 +61,6 @@ Search_engine::Search_engine() {
 	v.shrink_to_fit();
    bookFile.close();
 
-   i=0;
    filmFile.open(filmfileName);
    while(!filmFile.eof()) {
       getline(filmFile,Line);
@@ -87,7 +87,6 @@ Search_engine::Search_engine() {
 	v.shrink_to_fit();
    filmFile.close();
 
-   i=0;
    periodicFile.open(periodicfileName);
    while(!periodicFile.eof()) {
       getline(periodicFile,Line);
@@ -129,7 +128,6 @@ Search_engine::Search_engine() {
 	v.shrink_to_fit();
    periodicFile.close();
 
-   i=0;
    videoFile.open(videofileName);
    while(!videoFile.eof()) {
       getline(videoFile,Line);
@@ -164,52 +162,52 @@ Search_engine::Search_engine() {
 	v.shrink_to_fit();
    videoFile.close();
 }
-vector<Media*> title_search(string ss) {
+vector<Media*> Search_engine::title_search(string ss) {
    vector<Media*> results;
    int sz = card_catalog.size();
    for(int i=0; i < sz; i++) {
       if (card_catalog[i]->compare_title(ss)) {
          std::cout << "True";
-         results.push_back(catalog[i]);
+         results.push_back(card_catalog[i]);
       }
    }
    // for (int i =0; i < results.size(); ++i)
    //   results[i]->display();
    return results;
 }
-vector<Media*> callnumber_search(string ss) {
+vector<Media*> Search_engine::callnumber_search(string ss) {
    vector<Media*> results;
    int sz = card_catalog.size();
    for(int i=0; i < sz; i++) {
       if (card_catalog[i]->compare_callnumber(ss)) {
          std::cout << "True";
-         results.push_back(catalog[i]);
+         results.push_back(card_catalog[i]);
       }
    }
    // for (int i =0; i < results.size(); ++i)
    //   results[i]->display();
    return results;
 }
-vector<Media*> subjects_search(string ss) {
+vector<Media*> Search_engine::subjects_search(string ss) {
    vector<Media*> results;
    int sz = card_catalog.size();
    for(int i=0; i < sz; i++) {
       if (card_catalog[i]->compare_subjects(ss)) {
          std::cout << "True";
-         results.push_back(catalog[i]);
+         results.push_back(card_catalog[i]);
       }
    }
    // for (int i =0; i < results.size(); ++i)
    //   results[i]->display();
    return results;
 }
-vector<Media*> other_search(string ss) {
+vector<Media*> Search_engine::other_search(string ss) {
    vector<Media*> results;
    int sz = card_catalog.size();
    for(int i=0; i < sz; i++) {
       if (card_catalog[i]->compare_notes(ss)) {
          std::cout << "True";
-         results.push_back(catalog[i]);
+         results.push_back(card_catalog[i]);
       }
    }
    // for (int i =0; i < results.size(); ++i)
