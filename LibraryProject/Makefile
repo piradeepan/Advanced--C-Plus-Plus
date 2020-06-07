@@ -7,8 +7,8 @@
 #   3) Check and make sure the flags in line 14 are the ones you need for your project.
 #   4) Save using filename "Makefile" and use by typing "make" on the command line.
 
-TARGET       = Search
-OBJS         = Search.o
+TARGET       = main
+OBJS         = main.o
 REBUILDABLES = $(TARGET) $(OBJS)
 CC           = g++
 FLAGS        = -g -Wall -pedantic -std=c++11
