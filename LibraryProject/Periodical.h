@@ -6,7 +6,7 @@ class Periodical : public Media {
       virtual bool compare_other(const string& ss);
       void display();
    private:
-      string author, description, publisher, publishing_history, series, related_titles, other_forms_title, govt_dc_number;
+      std::string author, description, publisher, publishing_history, series, related_titles, other_forms_title, govt_dc_number;
 };
 #include "Periodical.cpp"
 #endif

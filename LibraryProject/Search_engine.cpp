@@ -43,17 +43,6 @@ Search_engine::Search_engine() {
          notes       = v[9];
          Book* bk = new Book(call_number, title, subjects, notes, author, description, publisher, city, year, series);
          card_catalog.push_back(bk);
-         cout << "Call Number: " << call_number << endl;
-         cout << "Title:  " << title << endl;
-         cout << "Subjects: " << subjects << endl;
-         cout << "Notes: " << notes << endl;
-         cout << "Author: " << author << endl;
-         cout << "Description: " << description << endl;
-         cout << "Publisher: " << publisher << endl;
-         cout << "City: " << city << endl;
-         cout << "Year: " << year << endl;
-         cout << "Series: " << series << endl;
-         cout << ++i <<"*******************************"<<endl;
          //Clear all the contents from the string variable
          call_number.clear();
          title.clear();
@@ -159,6 +148,7 @@ Search_engine::Search_engine() {
             label    = "";
          Video* vo = new Video(call_number, title, subjects, notes, description, distributor, series, label);
          card_catalog.push_back(vo);
+         cout << endl << card_catalog.size() << endl;
          //Clear all the contents from the string variable
          call_number.clear();
          title.clear();
@@ -178,7 +168,7 @@ vector<Media*> title_search(string ss) {
    vector<Media*> results;
    int sz = card_catalog.size();
    for(int i=0; i < sz; i++) {
-      if (card_catalog[i]->find(ss)) {
+      if (card_catalog[i]->compare_title(ss)) {
          std::cout << "True";
          results.push_back(catalog[i]);
       }
@@ -191,7 +181,7 @@ vector<Media*> callnumber_search(string ss) {
    vector<Media*> results;
    int sz = card_catalog.size();
    for(int i=0; i < sz; i++) {
-      if (card_catalog[i]->find(ss)) {
+      if (card_catalog[i]->compare_callnumber(ss)) {
          std::cout << "True";
          results.push_back(catalog[i]);
       }
@@ -203,20 +193,28 @@ vector<Media*> callnumber_search(string ss) {
 vector<Media*> subjects_search(string ss) {
    vector<Media*> results;
    int sz = card_catalog.size();
-   for(int i=0;i<sz;i++)
-   .
-   .
-   .
-   results.push_back();
+   for(int i=0; i < sz; i++) {
+      if (card_catalog[i]->compare_subjects(ss)) {
+         std::cout << "True";
+         results.push_back(catalog[i]);
+      }
+   }
+   // for (int i =0; i < results.size(); ++i)
+   //   results[i]->display();
+   return results;
 }
-vector<Media*> notes_search(string ss) {
+vector<Media*> other_search(string ss) {
    vector<Media*> results;
    int sz = card_catalog.size();
-   for(int i=0;i<sz;i++)
-   .
-   .
-   .
-   results.push_back();
+   for(int i=0; i < sz; i++) {
+      if (card_catalog[i]->compare_notes(ss)) {
+         std::cout << "True";
+         results.push_back(catalog[i]);
+      }
+   }
+   // for (int i =0; i < results.size(); ++i)
+   //   results[i]->display();
+   return results;
 }
 Search_engine::~Search_engine() {
    //release all the media objects using delete

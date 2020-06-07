@@ -7,7 +7,7 @@ class Book : public Media {
       virtual bool compare_other(const string& ss);
       void display();
    private:
-      string author, description, publisher, city, year, series;
+      std::string author, description, publisher, city, year, series;
 };
 #include "Book.cpp"
 #endif

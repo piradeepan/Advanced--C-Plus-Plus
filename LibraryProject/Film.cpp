@@ -1,18 +1,18 @@
 #include "Film.h"
 #include <iostream>
 using namespace std;
+
 Film::Film(string cn, string te, string st, string nts, string dtr, string yr): Media(cn, te, st, nts), director(dtr), year(yr) { }
 
 bool Film::compare_other(const string& ss) {
-   /*if(description.find(ss) != description.end() || notes.find(ss) != notes.end() || year.find(ss) != year.end() )
+   if(notes.find(ss) || director.find(ss) || year.find(ss))
       return true;
    else
-      return false;*/
-   return 0;
+      return false;
 }
 
 void Film::display() {
    Media::display();
-   cout << "Director: "<< director << endl;
-   cout << "Year: "<< year << endl;
+   cout << "Director: " << director << endl;
+   cout << "Year: "     << year << endl;
 }

@@ -6,7 +6,7 @@ class Film : public Media {
       virtual bool compare_other(const string& ss);
       void display();
    private:
-      string director, year;
+      std::string director, year;
 };
 #include "Film.cpp"
 #endif

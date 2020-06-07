@@ -29,15 +29,25 @@ int main() {
         if (option == 1) {
 			cout << "Enter the search string for Call Number :";
             cin >> search_input;
-            xyz = Library.title_search(search_input)
+            xyz = Library.callnumber_search(search_input);
+            search_input.clear();
 		} else if (option == 2) {
 			cout << "Enter the search string for Title :";
+            cin >> search_input;
+            xyz = Library.title_search(search_input);
+            search_input.clear();
             cin >> search_input;
 		} else if (option == 3) {
 			cout << "Enter the search string for Subject :";
             cin >> search_input;
+            xyz = Library.subjects_search(search_input);
+            search_input.clear();
+            cin >> search_input;
 		} else if (option == 4) {
 			cout << "Enter the search string for Other :";
+            cin >> search_input;
+            xyz = Library.other_search(search_input);
+            search_input.clear();
             cin >> search_input;
 		} else {
 			cout << "Invalid Option entered" << endl << endl;
