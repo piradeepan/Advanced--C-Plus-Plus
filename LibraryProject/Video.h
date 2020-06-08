@@ -1,5 +1,5 @@
-#ifndef VIDEO_H_INCLUDED
-#define VIDEO_H_INCLUDED
+#ifndef VIDEO_H
+#define VIDEO_H
 #include <string>
 class Video : public Media {
    public:
@@ -9,5 +9,4 @@ class Video : public Media {
    private:
       std::string description, distributor, series, label;
 };
-//#include "Video.cpp"
 #endif

@@ -1,5 +1,5 @@
-#ifndef BOOK_H_INCLUDED
-#define BOOK_H_INCLUDED
+#ifndef BOOK_H
+#define BOOK_H
 #include <string>
 class Book : public Media {
    public:
@@ -9,5 +9,4 @@ class Book : public Media {
    private:
       std::string author, description, publisher, city, year, series;
 };
-//#include "Book.cpp"
 #endif

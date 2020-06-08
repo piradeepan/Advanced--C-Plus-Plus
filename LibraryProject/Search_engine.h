@@ -1,4 +1,5 @@
-#ifndef SEARCH_H_INCLUDED
+#ifndef SEARCH_ENGINE_H
+#define SEARCH_ENGINE_H
 #include <string>
 #include <vector>
 #include "Media.h"
@@ -17,5 +18,4 @@ class Search_engine {
         std::vector<Media*> subjects_search(std::string ss);
         std::vector<Media*> other_search(std::string ss);
 };
-//#include "Search_engine.cpp"
 #endif

@@ -5,3 +5,5 @@ time_date_report/test_prg
 **/.vscode/**
 **/Makefile_old
 **/Makefile_todd
+**/*.zip
+**/*.tar.gz

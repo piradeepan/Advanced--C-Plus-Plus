@@ -1,5 +1,5 @@
-#ifndef PERIODICAL_H_INCLUDED
-#define PERIODICAL_H_INCLUDED
+#ifndef PERIODICAL_H
+#define PERIODICAL_H
 #include <string>
 class Periodical : public Media {
    public:
@@ -9,5 +9,4 @@ class Periodical : public Media {
    private:
       std::string author, description, publisher, publishing_history, series, related_titles, other_forms_title, govt_dc_number;
 };
-//#include "Periodical.cpp"
 #endif

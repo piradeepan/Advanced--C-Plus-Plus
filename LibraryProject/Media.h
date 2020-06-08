@@ -1,5 +1,5 @@
-#ifndef MEDIA_H_INCLUDED
-#define MEDIA_H_INCLUDED
+#ifndef MEDIA
+#define MEDIA
 #include <string>
 class Media {
    public:
@@ -13,5 +13,4 @@ class Media {
    protected:
       std::string call_number, title, subjects, notes;
 };
-//#include "Media.cpp"
 #endif

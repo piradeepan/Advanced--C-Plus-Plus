@@ -1,4 +1,5 @@
 #include <iostream>
+#include <iomanip>
 #include <vector>
 #include <stack>
 #include <sstream>
@@ -146,7 +147,6 @@ Search_engine::Search_engine() {
             label    = "";
          Video* vo = new Video(call_number, title, subjects, notes, description, distributor, series, label);
          card_catalog.push_back(vo);
-         cout << endl << card_catalog.size() << endl;
          //Clear all the contents from the string variable
          call_number.clear();
          title.clear();
@@ -167,12 +167,9 @@ vector<Media*> Search_engine::title_search(string ss) {
    int sz = card_catalog.size();
    for(int i=0; i < sz; i++) {
       if (card_catalog[i]->compare_title(ss)) {
-         std::cout << "True";
          results.push_back(card_catalog[i]);
       }
    }
-   // for (int i =0; i < results.size(); ++i)
-   //   results[i]->display();
    return results;
 }
 vector<Media*> Search_engine::callnumber_search(string ss) {
@@ -180,12 +177,9 @@ vector<Media*> Search_engine::callnumber_search(string ss) {
    int sz = card_catalog.size();
    for(int i=0; i < sz; i++) {
       if (card_catalog[i]->compare_callnumber(ss)) {
-         std::cout << "True";
          results.push_back(card_catalog[i]);
       }
    }
-   // for (int i =0; i < results.size(); ++i)
-   //   results[i]->display();
    return results;
 }
 vector<Media*> Search_engine::subjects_search(string ss) {
@@ -193,12 +187,9 @@ vector<Media*> Search_engine::subjects_search(string ss) {
    int sz = card_catalog.size();
    for(int i=0; i < sz; i++) {
       if (card_catalog[i]->compare_subjects(ss)) {
-         std::cout << "True";
          results.push_back(card_catalog[i]);
       }
    }
-   // for (int i =0; i < results.size(); ++i)
-   //   results[i]->display();
    return results;
 }
 vector<Media*> Search_engine::other_search(string ss) {
@@ -206,12 +197,9 @@ vector<Media*> Search_engine::other_search(string ss) {
    int sz = card_catalog.size();
    for(int i=0; i < sz; i++) {
       if (card_catalog[i]->compare_notes(ss)) {
-         std::cout << "True";
          results.push_back(card_catalog[i]);
       }
    }
-   // for (int i =0; i < results.size(); ++i)
-   //   results[i]->display();
    return results;
 }
 Search_engine::~Search_engine() {

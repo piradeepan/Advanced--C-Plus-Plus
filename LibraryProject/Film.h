@@ -1,5 +1,5 @@
-#ifndef FILM_H_INCLUDED
-#define FILM_H_INCLUDED
+#ifndef FILM_H
+#define FILM_H
 #include <string>
 class Film : public Media {
    public:
@@ -9,5 +9,4 @@ class Film : public Media {
    private:
       std::string director, year;
 };
-//#include "Film.cpp"
 #endif
