@@ -7,7 +7,7 @@ using namespace std;
 Periodical::Periodical(string cn, string te, string st, string nts, string ar, string dn, string pr, string ph, string srs, string rts, string oft, string gdn): Media(cn, te, st, nts), author(ar), description(dn), publisher(pr), publishing_history(ph), series(srs), related_titles(rts), other_forms_title(oft), govt_dc_number(gdn) { }
 
 bool Periodical::compare_other(const string& ss) {
-   if(notes.find(ss) != std::string::npos || series.find(ss) != std::string::npos || related_titles.find(ss) != std::string::npos)
+   if(description.find(ss) != std::string::npos || notes.find(ss) != std::string::npos || series.find(ss) != std::string::npos || related_titles.find(ss) != std::string::npos)
       return true;
    else
       return false;

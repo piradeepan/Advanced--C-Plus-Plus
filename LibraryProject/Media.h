@@ -1,9 +1,10 @@
-#ifndef MEDIA
-#define MEDIA
+#ifndef MEDIA_H
+#define MEDIA_H
 #include <string>
 class Media {
    public:
       Media(std::string cn, std::string te, std::string st, std::string nts);
+      ~Media();
       bool compare_callnumber(const std::string& ss);
       bool compare_title(const std::string& ss);
       bool compare_subjects(const std::string& ss);

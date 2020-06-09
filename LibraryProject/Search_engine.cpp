@@ -1,7 +1,6 @@
 #include <iostream>
 #include <iomanip>
 #include <vector>
-#include <stack>
 #include <sstream>
 #include <fstream>
 #include <utility>
@@ -162,7 +161,7 @@ Search_engine::Search_engine() {
 	v.shrink_to_fit();
    videoFile.close();
 }
-vector<Media*> Search_engine::title_search(string ss) {
+vector<Media*> Search_engine::title_search(const std::string& ss) {
    vector<Media*> results;
    int sz = card_catalog.size();
    for(int i=0; i < sz; i++) {
@@ -172,7 +171,7 @@ vector<Media*> Search_engine::title_search(string ss) {
    }
    return results;
 }
-vector<Media*> Search_engine::callnumber_search(string ss) {
+vector<Media*> Search_engine::callnumber_search(const std::string& ss) {
    vector<Media*> results;
    int sz = card_catalog.size();
    for(int i=0; i < sz; i++) {
@@ -182,7 +181,7 @@ vector<Media*> Search_engine::callnumber_search(string ss) {
    }
    return results;
 }
-vector<Media*> Search_engine::subjects_search(string ss) {
+vector<Media*> Search_engine::subjects_search(const std::string& ss) {
    vector<Media*> results;
    int sz = card_catalog.size();
    for(int i=0; i < sz; i++) {
@@ -192,7 +191,7 @@ vector<Media*> Search_engine::subjects_search(string ss) {
    }
    return results;
 }
-vector<Media*> Search_engine::other_search(string ss) {
+vector<Media*> Search_engine::other_search(const std::string& ss) {
    vector<Media*> results;
    int sz = card_catalog.size();
    for(int i=0; i < sz; i++) {

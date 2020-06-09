@@ -1,7 +1,7 @@
 main: Media.o Search_engine.o main.o Book.o Film.o Periodical.o Video.o
 	g++ Media.o Search_engine.o main.o Book.o Film.o Periodical.o Video.o -o main
 
-main.o: main.cpp Media.h
+main.o: main.cpp Search_engine.h Media.h
 	g++ -c main.cpp
 
 Media.o: Media.cpp Book.h Film.h Periodical.h Video.h Search_engine.h

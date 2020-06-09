@@ -35,3 +35,4 @@ bool Media::compare_notes(const string& ss) {
    else
       return false;
 }
+Media::~Media () { }
