@@ -11,25 +11,25 @@ void Media::display() {
    cout << "Subject " << setw(14) << " : " << subjects << endl;
    cout << "Notes " << setw(16) << " : " << notes << endl;
 }
-bool Media::compare_callnumber(const string& ss) {
+bool Media::compare_callnumber(const string& ss) const {
    if(call_number.find(ss) != std::string::npos)
       return true;
    else
       return false;
 }
-bool Media::compare_title(const string& ss) {
+bool Media::compare_title(const string& ss) const {
    if(title.find(ss) != std::string::npos) 
       return true;
    else
       return false;
 }
-bool Media::compare_subjects(const string& ss) {
+bool Media::compare_subjects(const string& ss) const {
    if(subjects.find(ss) != std::string::npos) 
       return true;
    else
       return false;
 }
-bool Media::compare_notes(const string& ss) {
+bool Media::compare_notes(const string& ss) const {
    if(notes.find(ss) != std::string::npos) 
       return true;
    else

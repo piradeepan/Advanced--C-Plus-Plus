@@ -13,9 +13,9 @@ class Search_engine {
     public:
         Search_engine();
         ~Search_engine();
-        std::vector<Media*> title_search(const std::string& ss);
-        std::vector<Media*> callnumber_search(const std::string& ss);
-        std::vector<Media*> subjects_search(const std::string& ss);
-        std::vector<Media*> other_search(const std::string& ss);
+        std::vector<Media*> title_search(const std::string& ss) const;
+        std::vector<Media*> callnumber_search(const std::string& ss) const;
+        std::vector<Media*> subjects_search(const std::string& ss) const;
+        std::vector<Media*> other_search(const std::string& ss) const;
 };
 #endif
